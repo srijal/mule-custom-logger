@@ -10,8 +10,8 @@ import org.mule.runtime.extension.api.annotation.dsl.xml.Xml;
  * configurations, connection providers, operations
  * and sources are going to be declared.
  */
-@Xml(prefix = "avio-logger")
-@Extension(name = "AVIO Logger")
+@Xml(prefix = "argano-logger")
+@Extension(name = "ARGANO Logger")
 @Configurations(CustomLoggerConfiguration.class)
 public class CustomLoggerExtension {
 

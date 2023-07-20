@@ -93,12 +93,12 @@ To use this functionality, be sure you are using at or above v2.1.0, navigate to
 
 Example of logger configuration that utilizes compression with the `compressor` attribute: 
 ```
-	<avio-logger:config name="ts-logger-test-config-compression-applied" doc:name="AVIO Logger Config" doc:id="5b6cabea-3a64-48ae-81a7-1c28c45e70cb" applicationVersion="#[p('api.version')]" defaultCategory="com.avioconsulting.mule" compressor="GZIP"/>
+	<argano-logger:config name="ts-logger-test-config-compression-applied" doc:name="AVIO Logger Config" doc:id="5b6cabea-3a64-48ae-81a7-1c28c45e70cb" applicationVersion="#[p('api.version')]" defaultCategory="com.avioconsulting.mule" compressor="GZIP"/>
 ```
 
 Example of logger configuration that is utilizing `encryptionAlgorithm` and `encryptionPassword` to implement encryption of the payload
 ```
-	<avio-logger:config name="ts-logger-test-config-encryption" doc:name="AVIO Logger Config" doc:id="e4f60146-7ee7-404a-a177-ac187c874bdd" applicationVersion="#[p('api.version')]" defaultCategory="com.avioconsulting.mule" encryptionAlgorithm="PBEWithHmacSHA512AndAES_128" encryptionPassword="${secure::encryption.password}"/>
+	<argano-logger:config name="ts-logger-test-config-encryption" doc:name="AVIO Logger Config" doc:id="e4f60146-7ee7-404a-a177-ac187c874bdd" applicationVersion="#[p('api.version')]" defaultCategory="com.avioconsulting.mule" encryptionAlgorithm="PBEWithHmacSHA512AndAES_128" encryptionPassword="${secure::encryption.password}"/>
 ```
 
 
@@ -111,7 +111,7 @@ To use the timer scope, pull it in from the AVIO Core section of the palette and
 After that, check the App Level properties and validate they're what you desire. Now you're good to go!
 
 # Using the Custom Logger Notification Listener
-The custom logger notification listener implements an interface that allows it to be notified when flows start and end. It's also able to retrieve your `avio-logger:config` global element and match its App Level properties to your custom loggers'. Note that (unless overriden) 
+The custom logger notification listener implements an interface that allows it to be notified when flows start and end. It's also able to retrieve your `argano-logger:config` global element and match its App Level properties to your custom loggers'. Note that (unless overriden) 
 all flow start/stop messages will have a category suffix of `.flow`.
 
 To use the custom logger notification listener navigate to your logger's global configuration and check the box for `Enable Flow Logs`
