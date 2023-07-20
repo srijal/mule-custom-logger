@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="MULE_LIB/com.mulesoft.modules/mule-cryptography-module/1.3.8"/>
+	<classpathentry kind="con" path="MULE_LIB/org.mule.tests.plugin/mule-tests-component-plugin/4.2.0"/>
+	<classpathentry kind="con" path="MULE_LIB/org.mule.modules/mule-compression-module/2.1.1"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
